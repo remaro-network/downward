@@ -62,8 +62,9 @@ def handle_axioms(operators, axioms, goals, layer_strategy):
     # the future. Similarly, it would be a good idea to remove the notion of
     # axiom layers and derived variable default values from the output.
     # (All derived variables should be binary and default to false.)
-    with timers.timing("Computing negative axioms"):
-        compute_negative_axioms(clusters)
+    #with timers.timing("Computing negative axioms"):
+    #    compute_negative_axioms(clusters)
+    print("CAVE: Skip computing negative axioms. This might have unforeseen side effects!")
 
     axioms = get_axioms(clusters)
     if DEBUG:
